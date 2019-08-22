@@ -1,26 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { lazy, Suspense } from 'react';
+import { Switch, Route } from 'react-router-dom';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import { GlobalStyle } from './global.styles';
+
+import Spinner from './components/Spinner/Spinner.component';
+import Header from './components/Header/Header.component';
+import Footer from './components/Footer/Footer.component';
+
+const HomePage = lazy(() => import('./pages/HomePage/HomePage.component'));
+const CharacterDetails = lazy(() =>
+  import('./components/CharacterDetails/CharacterDetails.component')
+);
+
+//! Install and use 'prop-types' in ths project
+
+const App = () => (
+  <div style={{ backgroundColor: '#676767' }}>
+    <GlobalStyle />
+    <Header />
+    <Switch>
+      <Suspense fallback={<Spinner />}>
+        <Route exact path="/" component={HomePage} />
+        <Route exact path="/character/:id" component={CharacterDetails} />
+      </Suspense>
+    </Switch>
+    <Footer />
+  </div>
+);
 
 export default App;
