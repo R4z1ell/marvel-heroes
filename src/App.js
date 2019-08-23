@@ -13,6 +13,7 @@ const CharacterDetails = lazy(() =>
 );
 
 //! Install and use 'prop-types' in ths project
+//! Find a way to use global variables with Styled Components(for colors)
 
 const App = () => (
   <div style={{ backgroundColor: '#676767' }}>

@@ -1,0 +1,58 @@
+import React, { Component } from 'react';
+
+import { getCharacterComics } from '../../utils/api-handlers';
+
+import ComicCard from '../ComicCard/ComicCard.component';
+import Spinner from '../Spinner/Spinner.component';
+
+import {
+  ComicsContainer,
+  ComicsLabelWrapper,
+  Label,
+  ComicsCardWrapper,
+  EmptyMessage
+} from './ComicsList.styles';
+
+const EMPTY_COMICS = 'Sorry, there are no comics for this character.';
+
+export class ComicsList extends Component {
+  state = {
+    comics: [],
+    loading: false
+  };
+
+  componentDidMount() {
+    const { id } = this.props;
+
+    getCharacterComics(id)
+      .then(comics =>
+        this.setState({
+          comics,
+          loading: true
+        })
+      )
+      .catch(err => console.log(err));
+  }
+
+  render() {
+    const { comics, loading } = this.state;
+
+    return loading ? (
+      <ComicsContainer>
+        <ComicsLabelWrapper>
+          <Label>Comics</Label>
+        </ComicsLabelWrapper>
+        {comics.length === 0 && <EmptyMessage>{EMPTY_COMICS}</EmptyMessage>}
+        <ComicsCardWrapper>
+          {comics.map(comic => (
+            <ComicCard {...comic} key={comic.id} />
+          ))}
+        </ComicsCardWrapper>
+      </ComicsContainer>
+    ) : (
+      <Spinner />
+    );
+  }
+}
+
+export default ComicsList;

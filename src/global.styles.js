@@ -11,6 +11,8 @@ export const GlobalStyle = createGlobalStyle`
 
   body {
     font-family: 'Roboto Condensed';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   a {
