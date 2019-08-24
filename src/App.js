@@ -14,9 +14,10 @@ const CharacterDetails = lazy(() =>
 
 //! Install and use 'prop-types' in ths project
 //! Find a way to use global variables with Styled Components(for colors)
+//! Fix the comics grid style in the CharacterDetail Page
 
 const App = () => (
-  <div style={{ backgroundColor: '#676767' }}>
+  <div>
     <GlobalStyle />
     <Header />
     <Switch>

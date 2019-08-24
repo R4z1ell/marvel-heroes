@@ -13,6 +13,7 @@ export const GlobalStyle = createGlobalStyle`
     font-family: 'Roboto Condensed';
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    background-color: #676767;
   }
 
   a {

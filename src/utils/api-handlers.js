@@ -10,6 +10,17 @@ const getCharactersList = async (limit = 24) => {
   const response = await axios.get(
     `${API_CHARACTERS_URL}${params}${API_KEY_PARAM}`
   );
+
+  const { results } = await response.data.data;
+
+  return results;
+};
+
+const searchCharactersByName = async name => {
+  const response = await axios.get(
+    `${API_CHARACTERS_URL}?nameStartsWith=${name}&${API_KEY_PARAM}`
+  );
+
   const { results } = await response.data.data;
 
   return results;
@@ -33,4 +44,9 @@ const getCharacterComics = async (id = 1009664) => {
   return results;
 };
 
-export { getCharactersList, getCharacterDetails, getCharacterComics };
+export {
+  getCharactersList,
+  getCharacterDetails,
+  getCharacterComics,
+  searchCharactersByName
+};

@@ -25,9 +25,6 @@ export const Label = styled.p`
 `;
 
 export const ComicsCardWrapper = styled.div`
-  /* display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 44px; */
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -36,4 +33,5 @@ export const ComicsCardWrapper = styled.div`
 export const EmptyMessage = styled.p`
   font-family: 'Roboto';
   font-size: 20px;
+  align-self: center;
 `;

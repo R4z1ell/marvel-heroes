@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const DetailsContainer = styled.div`
   max-width: 1288px;
-  min-height: 671px;
+  min-height: 67vh;
   margin: 120px auto 76px auto;
 `;
 

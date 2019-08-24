@@ -4,7 +4,17 @@ export const CoverImage = styled.img`
   width: 289px;
   height: 404px;
   border: 4px solid #22262a;
-  box-shadow: 0 26px 24px -14px rgba(0, 0, 0, 0.5);
+`;
+
+export const Wrapper = styled.div`
+  position: absolute;
+  left: 4px;
+  bottom: -97.1%;
+  width: 281px;
+  height: 396px;
+  background-color: #fff;
+  padding: 25px;
+  transition: all 0.7s;
 `;
 
 export const ComicCardContainer = styled.div`
@@ -12,31 +22,30 @@ export const ComicCardContainer = styled.div`
   height: 404px;
   overflow: hidden;
   margin-bottom: 44px;
+  box-shadow: 0 26px 24px -14px rgba(0, 0, 0, 0.5);
   z-index: 30;
 
-  .sfondo-bianco {
+  &::before {
+    bottom: 0px;
     position: absolute;
-    bottom: -100%;
-    width: 100%;
-    height: 404px;
-    background-color: #fff;
-    padding: 25px;
+    content: '';
+    width: 289px;
+    height: 4px;
+    background-color: #22262a;
+    z-index: 1;
+  }
+
+  &:hover ${Wrapper} {
+    bottom: 4px;
     transition: all 0.7s;
-
-    h2 {
-      margin-bottom: 20px;
-    }
-
-    p {
-      font-family: 'Roboto';
-      font-size: 16px;
-    }
   }
+`;
 
-  &:hover {
-    .sfondo-bianco {
-      bottom: 0%;
-      transition: all 0.7s;
-    }
-  }
+export const ComicName = styled.h2`
+  margin-bottom: 20px;
+`;
+
+export const ComicDescription = styled.p`
+  font-family: 'Roboto';
+  font-size: 16px;
 `;
