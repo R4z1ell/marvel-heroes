@@ -25,9 +25,22 @@ export const Label = styled.p`
 `;
 
 export const ComicsCardWrapper = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(4, 289px);
+  grid-column-gap: 44px;
+
+  @media screen and (max-width: 1360px) {
+    grid-template-columns: repeat(3, 289px);
+    justify-content: center;
+  }
+
+  @media screen and (max-width: 1040px) {
+    grid-template-columns: repeat(2, 289px);
+  }
+
+  @media screen and (max-width: 700px) {
+    grid-template-columns: repeat(1, 289px);
+  }
 `;
 
 export const EmptyMessage = styled.p`

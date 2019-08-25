@@ -61,7 +61,7 @@ class CharactersList extends Component {
           handleChange={event => this.handleChange(event.target.value)}
         />
         {loading ? (
-          <ListContainer>
+          <ListContainer characters={characters}>
             {characters.length !== 0 ? (
               characters.map(character => (
                 <CharacterCard
@@ -72,7 +72,7 @@ class CharactersList extends Component {
                 />
               ))
             ) : (
-              <p>Nothing found, try with a new research</p>
+              <p>No matches found!</p>
             )}
           </ListContainer>
         ) : (

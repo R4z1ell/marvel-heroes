@@ -13,4 +13,8 @@ export const SearchBoxContainer = styled.input`
   &:focus {
     outline: none;
   }
+
+  @media screen and (max-width: 715px) {
+    width: 89%;
+  }
 `;

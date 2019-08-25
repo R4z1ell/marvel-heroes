@@ -16,7 +16,16 @@ export const GlobalStyle = createGlobalStyle`
     background-color: #676767;
   }
 
+  html {
+    height: 100%;
+  }
+
   a {
     text-decoration: none;
+  }
+
+  #root {
+    position: relative;
+    min-height: 100vh;
   }
 `;
