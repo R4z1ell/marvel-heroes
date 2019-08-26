@@ -2,19 +2,11 @@ import React, { Component } from 'react';
 
 import { getCharacterDetails } from '../../utils/api/api-handlers';
 
+import CharacterImageAndDescription from '../../components/CharacterImageAndDescription/CharacterImageAndDescription.component';
 import ComicsList from '../../components/ComicsList/ComicsList.component';
 import Spinner from '../../components/Spinner/Spinner.component';
 
-import {
-  DetailsContainer,
-  CharacterImage,
-  Wrapper,
-  DescriptionContainer,
-  Description,
-  CharacterName
-} from './CharacterDetails.styles';
-
-const EMPTY_DESCRIPTION = 'Sorry, there is no description for this character.';
+import { DetailsContainer } from './CharacterDetails.styles';
 
 class CharacterDetailsPage extends Component {
   state = {
@@ -45,17 +37,11 @@ class CharacterDetailsPage extends Component {
 
     return loading ? (
       <DetailsContainer>
-        <Wrapper>
-          <CharacterImage src={imageUrl} alt="featured character" />
-          <DescriptionContainer>
-            <CharacterName>{character.name}</CharacterName>
-            <Description>
-              {character.description
-                ? character.description
-                : EMPTY_DESCRIPTION}
-            </Description>
-          </DescriptionContainer>
-        </Wrapper>
+        <CharacterImageAndDescription
+          imageUrl={imageUrl}
+          name={character.name}
+          description={character.description}
+        />
         <ComicsList id={id} />
       </DetailsContainer>
     ) : (
