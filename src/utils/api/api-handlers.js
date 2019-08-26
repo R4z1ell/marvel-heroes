@@ -1,6 +1,6 @@
 import axios from 'axios';
-import { API_PUBLIC_KEY } from './apikey';
 
+const API_PUBLIC_KEY = process.env.REACT_APP_API_PUBLIC_KEY;
 const API_BASE_URL = 'https://gateway.marvel.com/v1/public';
 const API_CHARACTERS_URL = `${API_BASE_URL}/characters`;
 const API_KEY_PARAM = `apikey=${API_PUBLIC_KEY}`;

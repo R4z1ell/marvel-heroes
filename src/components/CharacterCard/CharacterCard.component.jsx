@@ -19,7 +19,7 @@ const CharacterCard = ({ name, thumbnail, id }) => {
       <Link to={`/character/${id}`}>
         <CardFrame>
           <ImageWrapper>
-            <Image src={imgUrl} alt="image" />
+            <Image src={imgUrl} alt="character thumbnail" />
           </ImageWrapper>
         </CardFrame>
         <CardBody>
