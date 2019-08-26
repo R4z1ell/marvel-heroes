@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { colors } from '../../global.styles';
 
 export const ComicsContainer = styled.div`
   display: flex;
@@ -14,14 +15,14 @@ export const ComicsLabelWrapper = styled.div`
   width: 162px;
   height: 74px;
   margin-bottom: 70px;
-  background-color: #fff;
-  border: 4px solid #22262a;
+  background-color: ${colors.plainWhite};
+  border: 4px solid ${colors.mainBlack};
 `;
 
 export const Label = styled.p`
   font-size: 25px;
   text-transform: uppercase;
-  color: #22262a;
+  color: ${colors.mainBlack};
 `;
 
 export const ComicsCardWrapper = styled.div`

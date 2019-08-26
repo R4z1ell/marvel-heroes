@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 
 const gridStyle = css`
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: 1fr;
 `;
 
 const checkWindowSize = ({ characters }) => {

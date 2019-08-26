@@ -1,5 +1,16 @@
 import { createGlobalStyle } from 'styled-components';
 
+export const colors = {
+  bodyGray: '#676767',
+  mainGray: '#636767',
+  plainWhite: '#fff',
+  plainBlack: '#000',
+  mainBlack: '#22262a',
+  mainRed: '#e62429',
+  lightGray: 'rgba(195, 195, 195, 0.6)',
+  lightBlack: 'rgba(0, 0, 0, 0.5)'
+};
+
 export const GlobalStyle = createGlobalStyle`
   *,
   *:before,
@@ -13,7 +24,7 @@ export const GlobalStyle = createGlobalStyle`
     font-family: 'Roboto Condensed';
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: #676767;
+    background-color: ${colors.bodyGray};
   }
 
   html {

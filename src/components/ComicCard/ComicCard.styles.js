@@ -1,9 +1,10 @@
 import styled from 'styled-components';
+import { colors } from '../../global.styles';
 
 export const CoverImage = styled.img`
   width: 289px;
   height: 404px;
-  border: 4px solid #22262a;
+  border: 4px solid ${colors.mainBlack};
 `;
 
 export const Wrapper = styled.div`
@@ -12,7 +13,7 @@ export const Wrapper = styled.div`
   bottom: -97.1%;
   width: 281px;
   height: 396px;
-  background-color: #fff;
+  background-color: ${colors.plainWhite};
   padding: 25px;
   transition: all 0.7s;
 `;
@@ -22,7 +23,7 @@ export const ComicCardContainer = styled.div`
   height: 404px;
   overflow: hidden;
   margin-bottom: 44px;
-  box-shadow: 0 26px 24px -14px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 26px 24px -14px ${colors.lightBlack};
   z-index: 30;
 
   &::before {
@@ -31,7 +32,7 @@ export const ComicCardContainer = styled.div`
     content: '';
     width: 289px;
     height: 4px;
-    background-color: #22262a;
+    background-color: ${colors.mainBlack};
     z-index: 1;
   }
 

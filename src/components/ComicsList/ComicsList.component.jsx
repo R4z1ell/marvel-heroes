@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
-import { getCharacterComics } from '../../utils/api-handlers';
+import { getCharacterComics } from '../../utils/api/api-handlers';
 
 import ComicCard from '../ComicCard/ComicCard.component';
 import Spinner from '../Spinner/Spinner.component';
@@ -16,6 +17,10 @@ import {
 const EMPTY_COMICS = 'Sorry, there are no comics for this character.';
 
 export class ComicsList extends Component {
+  static propTypes = {
+    id: PropTypes.string.isRequired
+  };
+
   state = {
     comics: [],
     loading: false

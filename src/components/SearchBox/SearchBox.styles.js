@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { colors } from '../../global.styles';
 
 export const SearchBoxContainer = styled.input`
   font-family: 'Roboto Condensed';
@@ -6,7 +7,7 @@ export const SearchBoxContainer = styled.input`
   width: 643px;
   height: 56px;
   font-size: 16px;
-  border: 4px solid #22262a;
+  border: 4px solid ${colors.mainBlack};
   padding: 20px;
   margin-top: 60px;
 

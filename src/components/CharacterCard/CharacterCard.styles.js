@@ -1,15 +1,16 @@
 import styled from 'styled-components';
+import { colors } from '../../global.styles';
 
 export const CardBody = styled.div`
   position: relative;
-  background-color: #22262a;
+  background-color: ${colors.mainBlack};
   height: 130px;
   padding: 20px;
   overflow: hidden;
   z-index: 30;
 
   &::before {
-    background: #e62429;
+    background: ${colors.mainRed};
     bottom: 100%;
     content: '';
     height: 100%;
@@ -48,7 +49,7 @@ export const CardContainer = styled.div`
 `;
 
 export const CardFrame = styled.div`
-  background: #e62429;
+  background: ${colors.mainRed};
   margin: 0;
   overflow: hidden;
   padding: 0;
@@ -62,7 +63,7 @@ export const ImageWrapper = styled.figure`
   &::after {
     height: 4px;
     content: '';
-    background-color: #e62429;
+    background-color: ${colors.mainRed};
     width: 100%;
     position: absolute;
     left: 0;
@@ -71,7 +72,7 @@ export const ImageWrapper = styled.figure`
 `;
 
 export const CharacterName = styled.p`
-  color: #fff;
+  color: ${colors.plainWhite};
   font-size: 16px;
   text-transform: uppercase;
   text-align: left;

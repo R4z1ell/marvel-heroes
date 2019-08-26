@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { colors } from '../../global.styles';
 
 export const FooterContainer = styled.div`
   position: absolute;
@@ -8,10 +9,10 @@ export const FooterContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #22262a;
+  background-color: ${colors.mainBlack};
 `;
 
 export const Copyright = styled.p`
   font-size: 16px;
-  color: #fff;
+  color: ${colors.plainWhite};
 `;

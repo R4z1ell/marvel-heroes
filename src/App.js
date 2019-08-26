@@ -8,13 +8,9 @@ import Header from './components/Header/Header.component';
 import Footer from './components/Footer/Footer.component';
 
 const HomePage = lazy(() => import('./pages/HomePage/HomePage.component'));
-const CharacterDetails = lazy(() =>
-  import('./components/CharacterDetails/CharacterDetails.component')
+const CharacterDetailsPage = lazy(() =>
+  import('./pages/CharacterDetails/CharacterDetails.component')
 );
-
-//! Install and use 'prop-types' in ths project
-//! Find a way to use global variables with Styled Components(for colors)
-//! Fix the comics grid style in the CharacterDetail Page
 
 const App = () => (
   <div>
@@ -23,7 +19,7 @@ const App = () => (
     <Switch>
       <Suspense fallback={<Spinner />}>
         <Route exact path="/" component={HomePage} />
-        <Route exact path="/character/:id" component={CharacterDetails} />
+        <Route exact path="/character/:id" component={CharacterDetailsPage} />
       </Suspense>
     </Switch>
     <Footer />

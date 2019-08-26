@@ -26,7 +26,7 @@ const searchCharactersByName = async name => {
   return results;
 };
 
-const getCharacterDetails = async (id = 1009664) => {
+const getCharacterDetails = async id => {
   const response = await axios.get(
     `${API_CHARACTERS_URL}/${id}?${API_KEY_PARAM}`
   );
@@ -35,7 +35,7 @@ const getCharacterDetails = async (id = 1009664) => {
   return results[0];
 };
 
-const getCharacterComics = async (id = 1009664) => {
+const getCharacterComics = async id => {
   const response = await axios.get(
     `${API_CHARACTERS_URL}/${id}/comics?${API_KEY_PARAM}`
   );

@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import { colors } from '../../global.styles';
 
 export const HeaderContainer = styled.div`
   height: 87px;
@@ -7,7 +8,7 @@ export const HeaderContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #22262a;
+  background-color: ${colors.mainBlack};
 `;
 
 export const LogoContainer = styled(Link)`

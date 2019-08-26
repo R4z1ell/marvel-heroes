@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { colors } from '../../global.styles';
 
 export const DetailsContainer = styled.div`
   max-width: 1288px;
@@ -29,7 +30,7 @@ export const Wrapper = styled.div`
 export const CharacterImage = styled.img`
   width: 299px;
   height: 299px;
-  border: 4px solid #22262a;
+  border: 4px solid ${colors.mainBlack};
 
   @media screen and (max-width: 970px) {
     width: 200px;
@@ -40,8 +41,8 @@ export const CharacterImage = styled.img`
 
 export const DescriptionContainer = styled.div`
   width: 100%;
-  border: 4px solid #22262a;
-  background-color: #fff;
+  border: 4px solid ${colors.mainBlack};
+  background-color: ${colors.plainWhite};
   margin-left: 34px;
   padding: 35px;
 
@@ -57,7 +58,7 @@ export const DescriptionContainer = styled.div`
 export const CharacterName = styled.h2`
   font-size: 35px;
   text-transform: uppercase;
-  color: #22262a;
+  color: ${colors.mainBlack};
   margin-bottom: 35px;
 
   @media screen and (max-width: 1040px) {
@@ -79,7 +80,7 @@ export const Description = styled.p`
   font-family: 'Roboto';
   font-weight: 400;
   font-size: 20px;
-  color: #22262a;
+  color: ${colors.mainBlack};
 
   @media screen and (max-width: 1060px) {
     font-size: 18px;

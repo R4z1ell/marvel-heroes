@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import {
   ComicCardContainer,
@@ -24,6 +25,12 @@ const ComicCard = ({ title, description, thumbnail }) => {
       </Wrapper>
     </ComicCardContainer>
   );
+};
+
+ComicCard.propTypes = {
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string,
+  thumbnail: PropTypes.object.isRequired
 };
 
 export default ComicCard;

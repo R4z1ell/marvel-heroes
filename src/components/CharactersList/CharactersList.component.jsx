@@ -4,7 +4,7 @@ import { debounce } from 'lodash';
 import {
   getCharactersList,
   searchCharactersByName
-} from '../../utils/api-handlers';
+} from '../../utils/api/api-handlers';
 
 import CharacterCard from '../CharacterCard/CharacterCard.component';
 import SearchBox from '../SearchBox/SearchBox.component';

@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
-import { getCharacterDetails } from '../../utils/api-handlers';
+import { getCharacterDetails } from '../../utils/api/api-handlers';
 
-import ComicsList from '../CharacterComics/ComicsList.component';
-import Spinner from '../Spinner/Spinner.component';
+import ComicsList from '../../components/ComicsList/ComicsList.component';
+import Spinner from '../../components/Spinner/Spinner.component';
 
 import {
   DetailsContainer,
@@ -16,7 +16,7 @@ import {
 
 const EMPTY_DESCRIPTION = 'Sorry, there is no description for this character.';
 
-class CharacterDetails extends Component {
+class CharacterDetailsPage extends Component {
   state = {
     character: {},
     loading: false
@@ -64,4 +64,4 @@ class CharacterDetails extends Component {
   }
 }
 
-export default CharacterDetails;
+export default CharacterDetailsPage;
