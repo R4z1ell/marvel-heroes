@@ -11,19 +11,15 @@ import {
 
 const EMPTY_DESCRIPTION = 'Sorry, there is no description for this character.';
 
-const CharacterImageAndDescription = ({ imageUrl, name, description }) => {
-  return (
-    <Wrapper>
-      <CharacterImage src={imageUrl} alt="featured character" />
-      <DescriptionContainer>
-        <CharacterName>{name}</CharacterName>
-        <Description>
-          {description ? description : EMPTY_DESCRIPTION}
-        </Description>
-      </DescriptionContainer>
-    </Wrapper>
-  );
-};
+const CharacterImageAndDescription = ({ imageUrl, name, description }) => (
+  <Wrapper>
+    <CharacterImage src={imageUrl} alt="featured character" />
+    <DescriptionContainer>
+      <CharacterName>{name}</CharacterName>
+      <Description>{description ? description : EMPTY_DESCRIPTION}</Description>
+    </DescriptionContainer>
+  </Wrapper>
+);
 
 CharacterImageAndDescription.propTypes = {
   imageUrl: PropTypes.string.isRequired,
